@@ -26,12 +26,19 @@
 JDK java开发工具集 Java Development Kit == Java开发工具 （javac编译指令 java执行指令）+ JRE (java运行时环境)
 JRE == 核心类库 + JVM （java 虚拟机）
 
-## java开发工具  == javac java 等终端指令
+## java开发工具 == javac、java 等终端指令
 
 ## java JRE 运行时环境 == 核心类库  JVM
 
-# 目前碰到的中文乱码问题有两个方面
+# java API == 应用程序接口 为了开发java程序而预先定义的类和接口
 
-## 1.java文件本身字符集出错
+## 目前碰到的中文乱码问题有两个方面
 
-## 2. java文件编译后的文件出错
+## 1. 源文件字节码错误 —— 文件保存为正确的字符集
+
+## 2. 源文件编译时字节码错误 —— javac -encoding UTF-8 <文件名>
+
+# 主类名和文件名必须保持一致
+
+主类名和文件名必须保持样子hi
+
