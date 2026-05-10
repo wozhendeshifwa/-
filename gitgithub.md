@@ -12,19 +12,16 @@ ls
 pwd 展示当前工作目录
 .. 表示父文件夹
 
-cd  ../ 进入评平级目录
+cd  ../ 
 
-for i in a b c
+进入评平级目录
 
-do
-
-
-
-xx
-
-
-
+```bash
+$ for i in a b c
+do 
+mkdir dir_${i}
 done
+```
 
 ## 文件创建
 
