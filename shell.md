@@ -1,3 +1,7 @@
+
+
+
+
 shell是我们通过命令行与操作系统沟通的语言
 
 
@@ -95,8 +99,10 @@ declare -x name1
    echo ${name1:2:5}
    ```
 
-   # 默认变量
+   
 
+   # 默认变量
+   
    文件参数变量
    
    ``` 
@@ -167,4 +173,79 @@ declare -x name1
    printf "hello world%s\n" "acwing yxc" # 格式化输出字符串
    ```
    
-   # 逻辑运算符&&和||
+   # 逻辑运算符 && 和 ||
+   
+   ```bash
+   # $$ 表示与 
+   # || 表示或
+   # 二者具有短路原则
+   expr1 $$ expr2 # 当 expr1 为假时，直接忽略 expr2
+   expr1 || expr2 # 当 expr1 为真时，直接忽略 expr2
+   ```
+   
+   # test 命令 完全可以用 [] 和 [[]] 指令替代
+   
+   ```bash
+   # test 命令用于判断
+   [ 2 -lt 3 ]
+   echo $? # test [] [[]] 用 exit code 返回结果，而不是使用 stdout  
+    # 使用进程执行状态运行结果 表示
+   ```
+   
+   ```bash
+   # 文件类型判断
+   [ -e hello.txt ] # hello.txt 文件是否存在
+   [ -f hello.txt ] # hello.txt 是否为文件
+   [ -d hello.txt ] # hello.txt 是否为文件夹
+   ```
+   
+   ```bash
+   # 文件权限判断
+   [ -r hello.txt ] # hello.txt 是否可读
+   [ -w hello.txt ] # hello.txt 是否可写
+   [ -x hello.txt ] # hello.txt 是否可执行 
+   ```
+   
+   # if 判断语句
+   
+   ```shell
+   # 单循环
+   if [ condition ] && [ condition ]
+   then 
+   	expr
+   else 
+   	expr
+   fi
+   ```
+   
+   ```shell
+   # 多重循环
+   if [ condition_1 ] $$ [ condition_2 ] # condition_1 && condition_2 ?
+   then
+   	expr
+   elif [ condition_3 ] || [ condition_4 ] # condition_3 || condition_4 ?
+   then 
+   	expr
+   elif [[ ( condition_5 && condition_6 ) || ( condition_7 && condition_8 ) ]]# 判断( condition_5 && condition_6 ) || ( condition_7 && condition_8 ) 
+   then
+   	expr
+   fi  
+   如有问题，请纠正，并根据注释，补全代码
+   ```
+   
+   # 循环语句
+   
+   ```bash
+   for var in var1 var2 var3
+   do
+   	xxx
+   done
+   ```
+   
+   ```bash
+   
+   ```
+   
+   
+
+# 
