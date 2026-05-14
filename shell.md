@@ -236,6 +236,7 @@ declare -x name1
    # 循环语句
    
    ```bash
+   # 结构
    for var in var1 var2 var3
    do
    	xxx
@@ -243,9 +244,142 @@ declare -x name1
    ```
    
    ```bash
+   # 依次输出 a b c
+   for i in a b c
+   do
+   	echo  ${i} # 循环输出
+   done
    
+   # 循环输出当前执行路径文件
+   for filename in `ls`
+   do
+   	echo ${filename} 
+   done
+   
+   # 依次输出 1 ~ 10
+   for i in `seq 1 10`
+   do 
+   	echo ${i}
+   done
+   
+   # 依次输出 a b c   
+   for i in {a..c}
+   do
+   	echo ${i}
+   done
    ```
    
+   ```bash
+   # 格式
+   for ((expression;condition;expression))
+   do
+   	xxx
+   done
    
+   # 依次输出 1 - 10
+   for ((i=1; i<11;++i))
+   do
+   	echo ${i}
+   done
+   ```
+   
+   ```bash
+   # while 格式
+   while condition
+   do
+   	xxx
+   done
+   
+   # 循环读入，直到Ctrl + z
+   while read -p "请输入：" filename
+   do
+   	echo ${filename}
+   done
+   
+   ```
 
-# 
+# 函数
+
+```bash
+# 格式
+function func_name() {
+	xxx
+	xxx
+	...
+}
+
+# 获取 return值 和 stdout
+func (){
+	read -p "请输入：“ name
+	echo ${name}
+	return 12;  # 不写则默认返回值为0
+}
+ex_co=$?
+name1
+```
+
+```bash
+# 参数传递
+print_all(){
+	echo $0 # 输出 函数名
+	echo $1 # 输出 参数1
+	echo $2 # 输出 参数2
+	echo $3 # 输出 参数3
+}
+
+read -p “请依次输入三个参数” a b c
+print_all ${a} ${b} ${c}
+```
+
+```cpp
+res = 0;
+for (int i = 0; i <= $1; ++i)
+    res += i;
+cout << res << endl;  
+```
+
+# exit 终止当前 shell 进程
+
+```bash
+exit # 退出，返回最后一条命令的进程码
+exit 0 # 成功退出
+exit 0 # 以错误码 0 退出
+```
+
+```bash
+if [[ ! -e hello.txt ]]
+then
+	echo 错误
+	exit 1	
+fi
+
+echo hello world 
+```
+
+# 输出/输出重定向
+
+```bash
+command >> file  将stdout追加到 file文件末尾
+command > file 将stdout覆盖输出到 file文件末尾
+command < file 将文件内容输入到变量
+```
+
+```bash
+# 输出重定向
+echo "hello world" > hello,txt
+echo "hello world" >> hello.txt
+# 输入重定向
+```
+
+
+
+# 引入外部脚本
+
+```bash
+. /path/to/external.sh
+或
+source /path/to/external.sh
+```
+
+
+
