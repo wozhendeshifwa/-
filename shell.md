@@ -371,7 +371,7 @@ echo "hello world" >> hello.txt
 # 输入重定向
 ```
 
-
+tmux a -t shell
 
 # 引入外部脚本
 

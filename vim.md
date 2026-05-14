@@ -31,6 +31,13 @@ vim 分为三个模式：一般命令模式  编辑模式  命令行模式
 功能键 Home 光标移动到本行开头
 功能键 End 光标移动到本行末尾
 
-
-
 文本内容复制到另一个vim编辑器当中 
+
+```bash
+cd ~/homework/lesson_2/homework_1
+vim task.txt
+Acwing
+```
+
+
+
