@@ -45,7 +45,7 @@ id_rsa_pub # 公钥
 ## 2.将公钥部署到远程服务器
 
 ```bash
-ssh-copy-id User@HostName
+ssh-copy-id User@HostName  # ssh-copy-id git@github.com
 # 输入远程服务器密码
 # 公钥会自动追加到 远程服务器 ~/.ssh/authorized_keys
 ```
