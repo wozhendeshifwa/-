@@ -45,7 +45,7 @@ id_rsa_pub # 公钥
 ## 2.将公钥部署到远程服务器
 
 ```bash
-ssh-copy-id User@HostName  # ssh-copy-id git@github.com
+ssh-copy-id   # ssh-copy-id git@github.com
 # 输入远程服务器密码
 # 公钥会自动追加到 远程服务器 ~/.ssh/authorized_keys
 ```
@@ -65,7 +65,11 @@ scp mysever:~/xxx ~/xxx
 # 利用scp 配置其他服务器的 vim tmux
 
 ```bash
-scp ~/.vimrc ~/.tmux.conf mysever1
+ssh myserver "rm ~/.vimrc"
+scp ~/.vimrc myserver
+
+ssh myserver "rm ~/.tmuxconf"
+scp ~/.tmuxconf myserver
 ```
 
 # 相关的重要文件
@@ -76,5 +80,9 @@ scp ~/.vimrc ~/.tmux.conf mysever1
 ~/.ssh/known_hosts # 尝试 ssh 过的 主机公钥 信息 
 ~/.ssh/id_rsa  id_rsa_pu # ssh密钥对 
 ~/.ssh/authorized_keys # 存放ssh客户端的公钥，实现免密登录
+
+scp .vimrc
+scp .tmuxconf
+scp 
 ```
 
