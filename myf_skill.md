@@ -6,30 +6,11 @@
 
 如若添加注释，则参照原注释的模样
 
-
-
----
-
 代码补全，严格语法
 
 注释补全，少即是多
 
-```thrift
-namespace cpp match_service
 
-// User 定义
-struct User{
-1:i32 id,
-2:string name,
-3:i32 score
-}
 
-//远程服务接口
-service Match{
-	// 增
-	i32 add(1:User user, 2:string info),
-	// 删
-	i32 remove(1:User user, 2:string info),
-}
-```
+
 
