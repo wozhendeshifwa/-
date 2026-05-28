@@ -19,8 +19,8 @@ ssh user@HostName
 cd ~/.ssh/
 vim config
 Host mysever1
-	HostName xxx
-	User xxx
+	HostName 123.57.180.12 # 公网ip
+	User root   # 根用户 
 	Port 22 # 默认值
 # 多个服务器配置
 Host mysever2
