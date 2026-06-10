@@ -23,7 +23,7 @@ docker top xxx # 查看容器内正在运行的进程
 docker attach xxx # 附加到正在运行的容器
 docker export -o myubuntu.tar xxx # 容器导出
 docker import myubuntu.tar # 文件导入为 Docker 镜像
-docker cp myubuntu.tar CONTAINER:/root 
+docker cp myubuntu.tar CONTAINER:/root
 docker cp CONTAINER:/root/myubuntu.tar . # 在本地与容器之间复制文
 
 docker rename xxx xxx # 容器重命名
@@ -45,8 +45,5 @@ passwd  # 设置root密码
 
 ```bash
 ssh root@123.57.180.12 -p 20000 # 远程登录到 docker 容器当中
+
 ```
-
-adduser myf
-
- 
