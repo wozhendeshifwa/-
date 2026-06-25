@@ -1,43 +1,57 @@
-[TOC]
+函数
 
-# java 开发平台
+```
+static 修饰的函数属于类
+public 修饰的函数对外部公开
 
- ## 代码文本编辑器
 
-## 集成开发环境
+public static void main(String args[]){
+	
 
-# java 特性
+	return 0;
+}
+```
 
-面向对象oop  健壮性 跨平台性——依靠JVM在各大操作系统上执行
+类
 
-解释性，与编译性语言相对，编译后的文件额外需要解释器来执行文件
-解释性语言，与编译性相对，编译后的文件额外需要解释器来执行文件 
+```
+一个类文件中只能由一个 public 类，且文件名与public 类名保持一致
+允许有多个 非 public 类
+```
 
-## 面向对象 oop
+抽象类
 
-## 跨平台性——编译好的class文件可以在不同的操作系统中运行
+```
+public abstract class Media{
 
-## 解释性语言——编译好的class文件需要使用解释器来执行
+}
+```
 
-## 健壮性——Java的强类型机制、异常处理、垃圾的自动收集等是Java语言健壮性的保证
+继承 
 
-# Java JDK
+```
+抽象基类（父类）
+public abstract class Media{
 
-JDK java开发工具集 Java Development Kit == Java开发工具 （javac编译指令 java执行指令）+ JRE (java运行时环境)
-JRE == 核心类库 + JVM （java 虚拟机）
+}
+public class Music extents
+```
 
-## java开发工具 == javac、java 等终端指令
+多态
 
-## java JRE 运行时环境 == 核心类库  JVM
+```
+运行时多态
+```
 
-# java API == 应用程序接口 为了开发java程序而预先定义的类和接口
+重写 @override
 
-## 目前碰到的中文乱码问题有两个
-## 1. 源文件字节码错误 —— 文件保存为正确的字符集
+```
+```
 
-## 2. 源文件编译时字节码错误 —— javac -encoding UTF-8 <文件名>
+重载 @overload
 
-# 主类名和文件名必须保持一致
+```
 
-主类名和文件名必须保持样子hi
+```
 
+当我们对类与接口的关系不确定时，可以借助类图
